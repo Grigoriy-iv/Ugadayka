@@ -4,11 +4,29 @@
   color: white;
 }
 body {
-    display: flex;
-    flex-direction: column;
-    width: 1920px;
-    /* height: 1080px; */
+  display: flex;
+  flex-direction: column;
+  max-width: 1920px;
+  height: 100vh;
+  margin: 0 auto;
 }
+@media (max-width: 1024px)  {
+  body {
+    max-width: 1200px;
+  }    
+}
+@media (max-width: 992px) {
+  body {
+    max-width: 979px;
+  }
+}
+@media (max-width: 769px)  {
+  body {
+    max-width: none;
+  }    
+}
+
+/* -------------- Верхняя часть нашего сайта - шапка -------------- */
 .menu {
     display: flex;
     justify-content: space-between;
@@ -17,6 +35,18 @@ body {
     width: 100%;
     background-color: #D99898;
 }
+@media (max-width: 1200px) {
+  .menu {
+    height: 74px;
+  }    
+}
+@media (max-width: 769px) {
+  .menu {
+    height: 54px;
+  }
+} 
+
+
 .level {
     display: flex;
     justify-content: space-between;
@@ -27,16 +57,51 @@ body {
     margin-left: 30px;
     border-radius: 10px;
 }
+@media (max-width: 1200px) {
+  .level {
+    width: 202px;
+    height: 42px;
+    margin-left: 16px;
+  }    
+}
+@media (max-width: 769px) {
+  .level {
+    width: 180px;
+    height: 32px;
+    margin-left: 12px;
+  }
+}  
+
+
 .btn_level {
     background-color: #EB5757;
     height: 60px;
     width: 100px;
     border-radius: 10px;
     font-size: 36px;
+    letter-spacing: 2px;
     margin: 10px 18px;
     border: none;
     outline: none;
 }
+@media (max-width: 1200px) {
+  .btn_level {
+    height: 32px;
+    width: 54px;
+    font-size: 19px;
+    margin: 5px 10px;
+  }
+}
+@media (max-width: 769px) {
+  .btn_level {
+    height: 24px;
+    width: 40px;
+    font-size: 14px;
+    margin: 4px 7px;
+  }
+}
+
+
 .btn_level:focus {
     box-shadow:
         inset 0 3px 3px rgba(0,10,20,.5),
@@ -51,9 +116,26 @@ body {
     width: 300px;
     border-radius: 10px;
     font-size: 48px;
+    letter-spacing: 2px;
     border: none;
     outline: none;
 }
+@media (max-width: 1200px) {
+  .btn_play {
+    height: 36px;
+    width: 160px;
+    font-size: 24px;
+  }
+}
+@media (max-width: 769px) {
+  .btn_play {
+    height: 27px;
+    width: 120px;
+    font-size: 16px;
+  }
+}
+
+
 .btn_play:hover {
     cursor: pointer;
     animation: shake 0.2s;
@@ -81,48 +163,210 @@ body {
     border-radius: 10px;
     margin-right: 30px;
 }
+@media (max-width: 1200px) {
+  .clock {
+    height: 36px;
+    width: 112px;
+    margin-right: 16px;
+  }
+}
+@media (max-width: 769px) {
+  .clock {
+    height: 27px;
+    width: 84px;
+    margin-right: 12px;
+  }
+}
+
+
 img {
     margin: 0 10px;
 }
+@media (max-width: 1200px) {
+  img {
+    height: 32px;
+    width: 32px;
+    margin: 0 6px;
+  }
+}
+@media (max-width: 769px) {
+  img {
+    height: 24px;
+    width: 24px;
+    margin: 0 2px;
+  }
+}
+
+
 .time {
     font-family: 'Inconsolata', monospace;
     font-size: 36px;
     text-align: center;
-    margin-left: 5px;
+    letter-spacing: 2px;
+    margin-right: 10px;
 }
+@media (max-width: 1200px) {
+  .time {
+    font-size: 19px;
+  }
+}
+@media (max-width: 769px) {
+  .time {
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+}
+
+
+
 .body {
     display: flex;
-    justify-content: flex-end;
+    height: 100vh;
 }
+
+/* --------------------- Игровое поле ----------------- */
 .game_container {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #F2F2F2;
-    width: 100vw;
+    width: calc(100% - 450px);
 }
-.playing_area {
+@media (max-width: 1024px) {
+  .game_container {
+    width: 100vw;
+  }
+}
+@media (max-width: 769px) {
+  .game_container {
+    width: 100vw;
+  }
+}
+
+
+.rules_of_the_game {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    background-color: rgb(105, 29, 121);
+    font-family: 'Inconsolata', monospace;
+    text-align: center;
+    font-size: 48px;
+    letter-spacing: 2px;
     width: 75%;
+    height: 75%;
+    padding: 32px 32px;
+}
+@media (max-width: 1024px) {
+  .rules_of_the_game {
+    height: 75%;
+    font-size: 42px;
+    padding: 16px 16px;
+  }
+}
+@media (max-width: 769px) {
+  .rules_of_the_game {
+    width: 100%;
+    height: 100%;
+    font-size: 36px;
+    padding: 16px 16px;
+  }
+}
+@media (max-width: 500px) {
+  .rules_of_the_game {
+    width: 100%;
+    height: 100%;
+    font-size: 24px;
+    padding: 16px 16px;
+  }
+}
+@media (max-width: 320px) {
+  .rules_of_the_game {
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    padding: 16px 16px;
+  }
+}
+
+
+p {
+  font-size: 24px;
+}
+@media (max-width: 500px) {
+  p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 320px) {
+  p {
+    font-size: 12px;
+  }
+}
+
+/* -------------------------- Уровни сложности -------------------- */
+.playing_area_4x3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 720px;
     padding: 16px 0 0 16px;
 }
-.dark_side{
+.hidden {
+  display: none;
+}
+.playing_area_4x4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 720px;
+    padding: 16px 0 0 16px;
+}
+.hidden_1 {
+  display: none;
+}
+.playing_area_4x5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 720px;
+    padding: 16px 0 0 16px;
+}
+.hidden_2 {
+  display: none;
+}
+.dark_side {
     background-color: #BF4949;
     margin: 0 16px 16px 0;
-    height: 270px;    
-    width: calc(230% / 12);
+    height: 195px;    
+    width: calc(100vw / 12);
     border-radius: 10px;
 }
+
+/* -------------------------- Результаты ------------------------- */
+
 .results {
     display: flex;
     flex-direction: column;
     background-color: #EFCBAA;
-    height: 100vh;
-    width: 30%;
+    width: 450px;
 }
+@media (max-width: 1024px) {
+  .results {
+    width: 350px;
+  }
+}
+@media (max-width: 767px) {
+  .results {
+    display: none;
+  }
+}
+
+
 .clear {
     display: flex;
     justify-content: flex-end;
@@ -134,10 +378,35 @@ img {
     width: 100px;
     border-radius: 10px;
     font-size: 24px;
+    letter-spacing: 2px;
     margin: 10px 15px;
     border: none;
     outline: none;
 }
 .btn_clear:hover {
     cursor: pointer;
+}
+.btn_clear:active {
+    background-color: rgb(143, 140, 140);
+}
+.list_results {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.result {
+    display: flex;
+    font-family: 'Inconsolata', monospace;
+    text-align: left;
+    font-size: 36px;
+    letter-spacing: 2px;
+    height: 60px;
+}
+.number_list {
+    padding: 12px 0 0 50px;
+}
+.total_time {
+    border-bottom: 3px dotted #BF4949;
+    padding: 12px 0 0 25px;
+    width: 100%;
 }

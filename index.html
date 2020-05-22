@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <link rel="icon" type="image" href="images/ico/brain.ico">
     <link rel="stylesheet" href="styles/style.css">
     <script async src="scripts/container.js"></script>
@@ -23,7 +23,58 @@
     </div>
     <div class="body">
         <div class="game_container">
-            <div class="playing_area">
+            <div class="rules_of_the_game">
+                <h2>Добро пожаловать в игру "Угадайка"!</h2>
+                <p>Очень простая внешне, но требующая определенной расторопности и внимания
+                игра. Выберите уровень сложности. Перед вами появится определенное
+                количество карточек перевернутыми рубашкой вверх. Ваша 
+                задача открывать карточки поочередно щелкая мышкой и находить две одинаковые.
+                За один ход можно открыть только две карты. Если вы откроете две одинаковые
+                карточки, т.е. с одинаковыми изображениями, то они потемнеют. <br> Цель игры
+                открыть все карточки попарно.
+                </p>
+            </div>
+            <div class="playing_area_4x3 hidden">
+                <div class="dark_side"></div>
+                <div class="dark_side"></div>
+                <div class="dark_side"></div>
+                <div class="dark_side"></div>
+                <div class="dark_side"></div>
+                <div class="dark_side"></div>
+                <div class="dark_side"></div>
+                <div class="dark_side"></div>
+                <div class="dark_side"></div>
+                <div class="dark_side"></div>
+                <div class="dark_side"></div>
+                <div class="dark_side"></div>
+            </div>
+            <div class="playing_area_4x4 hidden_1">
+                <div class="dark_side"></div>
+                <div class="dark_side"></div>
+                <div class="dark_side"></div>
+                <div class="dark_side"></div>
+                <div class="dark_side"></div>
+                <div class="dark_side"></div>
+                <div class="dark_side"></div>
+                <div class="dark_side"></div>
+                <div class="dark_side"></div>
+                <div class="dark_side"></div>
+                <div class="dark_side"></div>
+                <div class="dark_side"></div>
+                <div class="dark_side"></div>
+                <div class="dark_side"></div>
+                <div class="dark_side"></div>
+                <div class="dark_side"></div>
+            </div>
+            <div class="playing_area_4x5 hidden_2">
+                <div class="dark_side"></div>
+                <div class="dark_side"></div>
+                <div class="dark_side"></div>
+                <div class="dark_side"></div>
+                <div class="dark_side"></div>
+                <div class="dark_side"></div>
+                <div class="dark_side"></div>
+                <div class="dark_side"></div>
                 <div class="dark_side"></div>
                 <div class="dark_side"></div>
                 <div class="dark_side"></div>
@@ -41,8 +92,14 @@
         <div class="results">
             <div class="clear"><button type="button" class="btn_clear">Clear</button></div>
             <div class="list_results">
-                <div class="total_time"></div>
-                <div class="total_time"></div>
+                <div class="result">
+                    <div class="number_list">1.</div>
+                    <div class="total_time">01:51</div>
+                </div>
+                <div class="result">
+                    <div class="number_list">2.</div>
+                    <div class="total_time">01:40</div>
+                </div>
             </div>
         </div>
     </div>
