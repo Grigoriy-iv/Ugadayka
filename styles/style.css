@@ -27,6 +27,7 @@ body {
 }
 
 /* -------------- Верхняя часть нашего сайта - шапка -------------- */
+
 .menu {
     display: flex;
     justify-content: space-between;
@@ -44,7 +45,7 @@ body {
   .menu {
     height: 54px;
   }
-} 
+}
 
 
 .level {
@@ -52,8 +53,8 @@ body {
     justify-content: space-between;
     align-items: center;
     background-color: #219653;
-    height: 80px;
     width: 380px;
+    height: 80px;
     margin-left: 30px;
     border-radius: 10px;
 }
@@ -70,7 +71,12 @@ body {
     height: 32px;
     margin-left: 12px;
   }
-}  
+}
+@media (max-width: 500px) {
+  .level {
+    display: none;
+  }
+}    
 
 
 .btn_level {
@@ -100,8 +106,12 @@ body {
     margin: 4px 7px;
   }
 }
-
-
+@media (max-width: 500px) {
+  .btn_level {
+    font-size: 12px;
+    margin: 4px 3px;
+  }
+}
 .btn_level:focus {
     box-shadow:
         inset 0 3px 3px rgba(0,10,20,.5),
@@ -110,6 +120,8 @@ body {
 .btn_level:hover {
     cursor: pointer;
 }
+
+
 .btn_play {
     background-color: #3F745A;
     height: 68px;
@@ -134,8 +146,11 @@ body {
     font-size: 16px;
   }
 }
-
-
+@media (max-width: 500px) {
+  .btn_play {
+    margin-left: 12px;
+  }
+}
 .btn_play:hover {
     cursor: pointer;
     animation: shake 0.2s;
@@ -154,6 +169,8 @@ body {
     90% { transform: translate(1px, 2px) rotate(0deg); }
     100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
+
+
 .clock {
     display: flex;
     align-items: center;
@@ -174,6 +191,11 @@ body {
   .clock {
     height: 27px;
     width: 84px;
+    margin-right: 12px;
+  }
+}
+@media (max-width: 500px) {
+  .clock {
     margin-right: 12px;
   }
 }
@@ -218,13 +240,13 @@ img {
 }
 
 
-
 .body {
     display: flex;
     height: 100vh;
 }
 
 /* --------------------- Игровое поле ----------------- */
+
 .game_container {
     display: flex;
     justify-content: center;
@@ -260,7 +282,6 @@ img {
 }
 @media (max-width: 1024px) {
   .rules_of_the_game {
-    height: 75%;
     font-size: 42px;
     padding: 16px 16px;
   }
@@ -296,7 +317,7 @@ p {
 }
 @media (max-width: 500px) {
   p {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 @media (max-width: 320px) {
@@ -306,6 +327,7 @@ p {
 }
 
 /* -------------------------- Уровни сложности -------------------- */
+
 .playing_area_4x3 {
     display: flex;
     justify-content: center;
@@ -314,7 +336,19 @@ p {
     width: 720px;
     padding: 16px 0 0 16px;
 }
-.hidden {
+@media (max-width: 1024px) {
+  .playing_area_4x3 {
+    width: 520px;
+    padding: 16px 0 0 16px;    
+  }
+}
+@media (max-width: 768px) {
+  .playing_area_4x3 {
+    width: 500px;
+    padding: 16px 0 0 16px;
+  }
+}
+.hidden_4x3 {
   display: none;
 }
 .playing_area_4x4 {
@@ -325,7 +359,19 @@ p {
     width: 720px;
     padding: 16px 0 0 16px;
 }
-.hidden_1 {
+@media (max-width: 1024px) {
+  .playing_area_4x4 {
+    width: 520px;
+    padding: 16px 0 0 16px;    
+  }
+}
+@media (max-width: 768px) {
+  .playing_area_4x4 {
+    width: 500px;
+    padding: 16px 0 0 16px;
+  }
+}
+.hidden_4x4 {
   display: none;
 }
 .playing_area_4x5 {
@@ -336,7 +382,19 @@ p {
     width: 720px;
     padding: 16px 0 0 16px;
 }
-.hidden_2 {
+@media (max-width: 1024px) {
+  .playing_area_4x5 {
+    width: 520px;
+    padding: 16px 0 0 16px;    
+  }
+}
+@media (max-width: 768px) {
+  .playing_area_4x5 {
+    width: 500px;
+    padding: 16px 0 0 16px;
+  }
+}
+.hidden_4x5 {
   display: none;
 }
 .dark_side {
@@ -346,6 +404,37 @@ p {
     width: calc(100vw / 12);
     border-radius: 10px;
 }
+@media (max-width: 1024px) {
+  .dark_side {
+    height: 195px;
+    width: calc(120vw / 12);;  
+  }
+}
+@media (max-width: 768px) {
+  .dark_side {
+    height: 175px;
+    width: calc(160vw / 12);;
+  }
+}
+@media (max-width: 415px) {
+  .dark_side {
+    height: 115px;
+    width: calc(300vw / 18);;
+  }
+}
+@media (max-width: 375px) {
+  .dark_side {
+    height: 100px;
+    width: calc(300vw / 18);
+  }
+}
+@media (max-width: 320px) {
+  .dark_side {
+    height: 85px;
+    width: calc(300vw / 18);;
+  }
+}
+
 
 /* -------------------------- Результаты ------------------------- */
 
@@ -357,7 +446,7 @@ p {
 }
 @media (max-width: 1024px) {
   .results {
-    width: 350px;
+    width: 370px;
   }
 }
 @media (max-width: 767px) {
@@ -406,7 +495,7 @@ p {
     padding: 12px 0 0 50px;
 }
 .total_time {
+    width: 100%;
     border-bottom: 3px dotted #BF4949;
     padding: 12px 0 0 25px;
-    width: 100%;
 }
