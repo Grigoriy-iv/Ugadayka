@@ -5,56 +5,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <link rel="icon" type="image" href="images/ico/brain.ico">
     <link rel="stylesheet" href="styles/style.css">
-    <script async src="scripts/container.js"></script>
+    <!-- <script async src="scripts/script.js"></script> -->
     <title>ugadayka</title>
 </head>
 <body>
     <div class="menu">
-        <div class="level">
-            <button type="button" class="btn_level">4x3</button>
-            <button type="button" class="btn_level">4x4</button>
-            <button type="button" class="btn_level">4x5</button>
+<!-- --------------------- Menu BURGER ------------------------ -->
+        <button type="button" class="btn_burger">
+            <img src="images/ico/burger.ico" class="img_burger" alt="">
+        </button>
+        <div class="menu_burger">
+            <div class="list_burger hidden">
+                <div id="level_burger" class="level_burger">
+                    <button type="button" id="btn_burg_4x3" class="btn_level_burger">4x3</button>
+                    <button type="button" id="btn_burg_4x4" class="btn_level_burger">4x4</button>
+                    <button type="button" id="btn_burg_4x5" class="btn_level_burger">4x5</button>
+                </div>
+                <div id="results_burger" class="results_burger">
+                    <button type="button" id="btn_results" class="btn_results">Progress</button>
+                </div>
+            </div>
+        </div>
+<!-- ------------------------- MAIN Menu  ------------------------- -->
+        <div class="level_info">
+            <div class="level">
+                <button type="button" id="btn_4x3" class="btn_level">4x3</button>
+                <button type="button" id="btn_4x4" class="btn_level">4x4</button>
+                <button type="button" id="btn_4x5" class="btn_level">4x5</button>
+            </div>
+            <div class="info">
+                <button type="button" class="btn_info">
+                    <img src="images/ico/info.ico" class="img_info" alt="">
+                </button>
+            </div>
         </div>
         <button type="button" class="btn_play">Play</button>
         <div class="clock">
-            <img src="images/ico/time.ico">
+            <img src="images/ico/time.ico" class="img_time" alt="">
             <div class="time">00:00</div>
         </div>
     </div>
     <div class="body">
         <div class="game_container">
             <div class="rules_of_the_game">
-                <h2>Добро пожаловать в игру "Угадайка"!</h2>
-                <p>Очень простая внешне, но требующая определенной расторопности и внимания
-                игра. Выберите уровень сложности. Перед вами появится определенное
-                количество карточек перевернутыми рубашкой вверх. Ваша 
-                задача открывать карточки поочередно щелкая мышкой и находить две одинаковые.
-                За один ход можно открыть только две карты. Если вы откроете две одинаковые
-                карточки, т.е. с одинаковыми изображениями, то они потемнеют. <br> Цель игры
-                открыть все карточки попарно.
-                </p>
+                <div class="close">
+                    <button  type="button" class="btn_close">
+                        <img src="images/ico/close.ico" class="img_close" alt="">
+                    </button>
+                </div>
+                <div class="text">
+                    <div class="text_shapka">
+                        <h2>Добро пожаловать в игру "Угадайка"!</h2>
+                    </div>
+                    <div class="text_body">    
+                        <p>Очень простая внешне, но требующая определенной расторопности и внимания
+                        игра. Выберите уровень сложности. Перед вами появится определенное
+                        количество карточек перевернутыми рубашкой вверх. Ваша 
+                        задача открывать карточки поочередно щелкая мышкой и находить две одинаковые.
+                        За один ход можно открыть только две карты. Если вы откроете две одинаковые
+                        карточки, т.е. с одинаковыми изображениями, то они потемнеют. <br> <br> Цель игры ->
+                        открыть все карточки попарно.</p>
+                    </div>
+                </div>
             </div>
-            <div class="playing_area_4x3 hidden_4x3">
-                <div class="dark_side"></div>
-                <div class="dark_side"></div>
-                <div class="dark_side"></div>
-                <div class="dark_side"></div>
-                <div class="dark_side"></div>
-                <div class="dark_side"></div>
-                <div class="dark_side"></div>
-                <div class="dark_side"></div>
-                <div class="dark_side"></div>
-                <div class="dark_side"></div>
-                <div class="dark_side"></div>
-                <div class="dark_side"></div>
-            </div>
-            <div class="playing_area_4x4 hidden_4x4">
-                <div class="dark_side"></div>
-                <div class="dark_side"></div>
-                <div class="dark_side"></div>
-                <div class="dark_side"></div>
-                <div class="dark_side"></div>
-                <div class="dark_side"></div>
+            <div class="playing_area_4x3 hidden">
+                <div class="dark_side">
+                    <!-- <li class="bird"></li> -->
+                </div>
+                <div class="dark_side">
+                    <!-- <li class="mushroom"></li> -->
+                </div>
                 <div class="dark_side"></div>
                 <div class="dark_side"></div>
                 <div class="dark_side"></div>
@@ -66,7 +86,25 @@
                 <div class="dark_side"></div>
                 <div class="dark_side"></div>
             </div>
-            <div class="playing_area_4x5 hidden_4x5">
+            <div class="playing_area_4x4 hidden">
+                <div class="dark_side"></div>
+                <div class="dark_side"></div>
+                <div class="dark_side"></div>
+                <div class="dark_side"></div>
+                <div class="dark_side"></div>
+                <div class="dark_side"></div>
+                <div class="dark_side"></div>
+                <div class="dark_side"></div>
+                <div class="dark_side"></div>
+                <div class="dark_side"></div>
+                <div class="dark_side"></div>
+                <div class="dark_side"></div>
+                <div class="dark_side"></div>
+                <div class="dark_side"></div>
+                <div class="dark_side"></div>
+                <div class="dark_side"></div>
+            </div>
+            <div class="playing_area_4x5 hidden">
                 <div class="dark_side"></div>
                 <div class="dark_side"></div>
                 <div class="dark_side"></div>
@@ -89,8 +127,13 @@
                 <div class="dark_side"></div>
             </div>
         </div>
-        <div class="results">
-            <div class="clear"><button type="button" class="btn_clear">Clear</button></div>
+        <div id="results" class="results">
+            <div class="clear">
+                <button type="button" class="btn_close_results">
+                    <img src="images/ico/close.ico" class="img_close" alt="">
+                </button>
+                <button type="button" class="btn_clear">Clear</button>
+            </div>
             <div class="list_results">
                 <div class="result">
                     <div class="number_list">1.</div>
@@ -103,5 +146,6 @@
             </div>
         </div>
     </div>
+    <script async src="scripts/script.js"></script>
 </body>
 </html>
