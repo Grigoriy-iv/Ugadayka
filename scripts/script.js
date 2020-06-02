@@ -55,7 +55,7 @@ btn_results.addEventListener("click", tableResults);
 let results = document.querySelector(".results");
 function tableResults() {
     results.classList.remove("hidden");
-    results.setAttribute ("style", "display: flex; width: 100%");
+    results.classList.add("active");
     rules.classList.add("hidden");
     game_container.classList.add("hidden");
     showBurger();
@@ -64,13 +64,17 @@ function tableResults() {
 let btn_close_results = document.querySelector(".btn_close_results");
 btn_close_results.addEventListener("click", closeTableResults);
 function closeTableResults() {
-    results.classList.add("hidden");
+    results.classList.remove("active");
+    _area_4x3();
+    list_burger.classList.toggle("hidden");
 }
 
 let close_rules = document.querySelector(".btn_close");
 close_rules.addEventListener("click", closeRules);
 function closeRules() {
     rules.classList.add("hidden");
+    _area_4x3();
+    list_burger.classList.toggle("hidden");
 }
 
 let info = document.querySelector(".btn_info");
@@ -78,12 +82,11 @@ info.addEventListener("click", showRules);
 function showRules() {
     game_container.classList.remove("hidden");
     rules.classList.remove("hidden");
+    results.classList.remove("active");
     playing_area_4x3.classList.add("hidden");
     playing_area_4x4.classList.add("hidden");
     playing_area_4x5.classList.add("hidden");
-    results.setAttribute ("style", "display: none; width: 0");
 }
-
 
 
 // function _area_4x3() {
@@ -97,9 +100,9 @@ function showRules() {
 // }
 
 // function setAreaVisibility(visibleArea) {
-//     let button = ["playing_area_4x3", "playing_area_4x4", "playing_area_4x5"];
-//     for (let i = 0; i < arr.length; i++) {
-//         let playing_area = button[i];
+//     let buttons = ["playing_area_4x3", "playing_area_4x4", "playing_area_4x5"];
+//     for (let i = 0; i < buttons.length; i++) {
+//         let playing_area = buttons[i];
 //         document.querySelector(`.${playing_area}`).classList.add("hidden");
 //     }
 //     document.querySelector(`.${visibleArea}`).classList.remove("hidden");

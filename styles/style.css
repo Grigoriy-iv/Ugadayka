@@ -601,6 +601,9 @@ body {
     width: calc(25% - 16px);
     border-radius: 10px;
 }
+.dark_side.apple {
+    background-color: green;
+}
 @media (max-width: 1024px) {
   .dark_side {
     height: 195px;
@@ -644,6 +647,10 @@ body {
 @media (max-width: 767px) {
   .results {
     display: none;
+  }
+  .results.active {
+    display: flex;
+    width: 100%;
   }
 }
 
