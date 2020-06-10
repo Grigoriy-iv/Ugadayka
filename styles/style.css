@@ -599,6 +599,7 @@ body {
     height: 195px;    
     width: calc(25% - 16px);
     border-radius: 10px;
+    user-select: none;
     transform-style: preserve-3d;
     transform: scale(1);
     transition: transform .5s;
@@ -617,6 +618,7 @@ body {
   padding: 20px;
   background-color: rgb(228, 228, 228);
   border-radius: 10px;
+  pointer-events: none;
   transform: rotateY(180deg);
 }
 @media (max-width: 1024px) {

@@ -53,6 +53,7 @@ function showBurger() {
 let btn_results = document.querySelector(".btn_results");
 btn_results.addEventListener("click", tableResults);
 let results = document.querySelector(".results");
+let btn;
 function tableResults() {
     results.classList.remove("hidden");
     results.classList.add("active");
