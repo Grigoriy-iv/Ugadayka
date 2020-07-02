@@ -745,16 +745,16 @@ body {
     font-size: 24px;
   }
 }
-.number_list {
+.number {
     padding: 12px 0 0 50px;
 }
 @media (max-width: 700px) {
-  .number_list {
+  .number {
     padding: 12px 0 0 25px;
   }
 }
 .total_time {
     width: 100%;
-    border-bottom: 3px dotted #BF4949;
+    /* border-bottom: 3px dotted #BF4949; */
     padding: 12px 0 0 25px;
 }
