@@ -5,6 +5,8 @@ let openedOneCard;
 let lock = false;
 let lock_time = false;
 let clock;
+let a;
+let b;
 
 (function mix() {
     for (let i = 0; i < cards.length; i++) {
@@ -12,7 +14,7 @@ let clock;
         card.style.order = Math.floor(Math.random() * cards.length);
     }
 })();
-
+   
 function startGame() {
     setTimeout(() => {
         if (!lock_time) {
@@ -33,8 +35,13 @@ function startGame() {
                 if (!openedOneCard) {
                     openedOneCard = card;
                 }
-                else{
-                    if (openedOneCard === card) {
+                else {
+                    if (openedOneCard.className === card.className) {
+                        // recordResult();
+                        // stop_timer();
+                        new_cards.push(card);
+                        openedOneCard = null;
+                        lock = false;
                         return;
                     }
                     lock = true;
@@ -45,12 +52,29 @@ function startGame() {
                         }
                         openedOneCard = null;
                         lock = false;
+                        // return new_cards[i] = card.classList.contains("rotate");
                     }, 1300);
                 }
             }
         }
     }, 3000);
 }
+
+let new_cards = [];
+function verification() {
+
+}
+stop_a = new_cards.every(verification);
+// if ()
+
+// function verification() {
+//     return card.classList.contains("rotate") === true;
+// }
+// stop_a = cards.every(verification);
+// if (stop_a === true) {
+//     recordResult();
+//     stop_timer();
+// }
 
 let time = document.querySelector(".time");
 let seconds = 0;
