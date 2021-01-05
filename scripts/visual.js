@@ -53,7 +53,6 @@ function showBurger() {
 let btn_results = document.querySelector(".btn_results");
 btn_results.addEventListener("click", tableResults);
 let results = document.querySelector(".results");
-let btn;
 function tableResults() {
     results.classList.remove("hidden");
     results.classList.add("active");
@@ -66,22 +65,22 @@ let btn_close_results = document.querySelector(".btn_close_results");
 btn_close_results.addEventListener("click", closeTableResults);
 function closeTableResults() {
     results.classList.remove("active");
-    _area_4x3();
-    list_burger.classList.toggle("hidden");
+    // _area_4x3();
+    // list_burger.classList.toggle("hidden");
 }
 
 let close_rules = document.querySelector(".btn_close");
 close_rules.addEventListener("click", closeRules);
 function closeRules() {
     rules.classList.add("hidden");
-    _area_4x3();
-    list_burger.classList.toggle("hidden");
+    // _area_4x3();
+    // list_burger.classList.toggle("hidden");
 }
 
 let info = document.querySelector(".btn_info");
 info.addEventListener("click", showRules);
 function showRules() {
-    game_container.classList.remove("hidden");
+    // game_container.classList.remove("hidden");
     rules.classList.remove("hidden");
     results.classList.remove("active");
     playing_area_4x3.classList.add("hidden");

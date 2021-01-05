@@ -5,10 +5,12 @@
   font-family: 'Inconsolata', monospace;
 }
 body {
+  /* display: contents; */
   display: flex;
   flex-direction: column;
   max-width: 1920px;
   margin: 0 auto;
+  /* position: static; */
 }
 @media (max-width: 1024px)  {
   body {
